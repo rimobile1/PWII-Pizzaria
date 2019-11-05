@@ -19,14 +19,15 @@ export class ComandaComponent implements OnInit {
       chopp : this.formBuilder.control(''),
       Pizza : this.formBuilder.control(''),
       recheio : this.formBuilder.control(''),
-      pessoa : this.formBuilder.control('')
+      pessoa : this.formBuilder.control(''),
+      taxaservico : this.formBuilder.control(true),
     })
 
   }
  onProcessar(){
    
   let totalChopp:number =   this.formComanda.value.chopp * 7.30;
-  let totalPizza:number =   this.formComanda.value.pizza * 31.50;
+  let totalPizza:number =   this.formComanda.value.Pizza * 31.50;
   let totalRecheio:number =   this.formComanda.value.recheio * 5.90;
   let totalPessoa:number =   this.formComanda.value.pessoa;
   let valorTaxa: number = 0;   
